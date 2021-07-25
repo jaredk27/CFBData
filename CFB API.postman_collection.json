@@ -42,7 +42,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{Base_URL}}/teams/fbs?year=2009",
+							"raw": "{{Base_URL}}/teams/fbs?year=2020",
 							"host": [
 								"{{Base_URL}}"
 							],
@@ -53,7 +53,7 @@
 							"query": [
 								{
 									"key": "year",
-									"value": "2009"
+									"value": "2020"
 								}
 							]
 						}
@@ -345,7 +345,42 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "{{Base_URL}}/games/weather?year=2020&week=1",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"games",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "week",
+									"value": "1"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular",
+									"disabled": true
+								},
+								{
+									"key": "team",
+									"value": "SJSU",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "MWC",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -712,7 +747,15 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "{{Base_URL}}/conferences",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"conferences"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1079,7 +1122,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{Base_URL}}/recruiting/players?team=Miami",
+							"raw": "{{Base_URL}}/recruiting/players?year=2020&team=Miami",
 							"host": [
 								"{{Base_URL}}"
 							],
@@ -1091,8 +1134,7 @@
 								{
 									"key": "year",
 									"value": "2020",
-									"description": "Recruiting class year, required if no team specified",
-									"disabled": true
+									"description": "Recruiting class year, required if no team specified"
 								},
 								{
 									"key": "classification",
@@ -1194,7 +1236,28 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "{{Base_URL}}/ppa/predicted?down=1&distance=7",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ppa",
+								"predicted"
+							],
+							"query": [
+								{
+									"key": "down",
+									"value": "1",
+									"description": "Required"
+								},
+								{
+									"key": "distance",
+									"value": "7",
+									"description": "Required"
+								}
+							]
+						}
 					},
 					"response": []
 				},
