@@ -1,0 +1,1732 @@
+{
+	"info": {
+		"_postman_id": "d930193a-6d3c-42f7-80d3-49aa33dbd9e0",
+		"name": "CFB API",
+		"description": "This collection collects each request provided by the CollegeFootballData.com API. You can visit this site to request an API token: https://collegefootballdata.com/key\n\nFull API Swagger UI specifications are available at this link: https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/\n\nThis collection requires two global variables to be set. {{Token}} will store your API token, while {{Base_URL}} should point to https://api.collegefootballdata.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "List D1 Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/teams?year=2021&conference=SEC",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"teams"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2021"
+								},
+								{
+									"key": "conference",
+									"value": "SEC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List FBS Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/teams/fbs?year=2009",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"teams",
+								"fbs"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2009"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/teams?conference=MWC",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"teams"
+							],
+							"query": [
+								{
+									"key": "conference",
+									"value": "MWC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team roster",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/roster?team=BYU&year=2020",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"roster"
+							],
+							"query": [
+								{
+									"key": "team",
+									"value": "BYU"
+								},
+								{
+									"key": "year",
+									"value": "2020"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Talent Rankings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/talent?year=2020",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"talent"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team matchup history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/teams/matchup?team1=Texas&team2=Texas A%26M",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"teams",
+								"matchup"
+							],
+							"query": [
+								{
+									"key": "team1",
+									"value": "Texas",
+									"description": "Required"
+								},
+								{
+									"key": "team2",
+									"value": "Texas A&M",
+									"description": "Required"
+								},
+								{
+									"key": "minYear",
+									"value": "1990",
+									"disabled": true
+								},
+								{
+									"key": "maxYear",
+									"value": "2020",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Games",
+			"item": [
+				{
+					"name": "Game Results",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/games?year=2020&week=12",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"games"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "week",
+									"value": "12"
+								},
+								{
+									"key": "seasonType",
+									"value": "postseason",
+									"disabled": true
+								},
+								{
+									"key": "team",
+									"value": "Alabama",
+									"disabled": true
+								},
+								{
+									"key": "home",
+									"value": "Georgia",
+									"disabled": true
+								},
+								{
+									"key": "away",
+									"value": "Ole Miss",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "SEC",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/records?year=2020",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"records"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Ohio State",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "Big Ten",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Calendar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/calendar?year=2020",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"calendar"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Game Media Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/games/media?year=2020&week=1",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"games",
+								"media"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "week",
+									"value": "1"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular",
+									"disabled": true
+								},
+								{
+									"key": "team",
+									"value": "Akron",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "MAC",
+									"disabled": true
+								},
+								{
+									"key": "mediaType",
+									"value": "tv",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Game weather information (Patreon Only)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Player game stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/games/players?year=2020&week=12&seasonType=regular&team=washington",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"games",
+								"players"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "week",
+									"value": "12"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular"
+								},
+								{
+									"key": "team",
+									"value": "washington"
+								},
+								{
+									"key": "conference",
+									"value": "PAC-12",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "offensive",
+									"disabled": true
+								},
+								{
+									"key": "gameId",
+									"value": "401249413",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team game stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/games/teams?year=2020&week=8&seasonType=regular&team=Kansas State",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"games",
+								"teams"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "week",
+									"value": "8"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular"
+								},
+								{
+									"key": "team",
+									"value": "Kansas State"
+								},
+								{
+									"key": "conference",
+									"value": "Big XII",
+									"disabled": true
+								},
+								{
+									"key": "gameId",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advanced box scores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/game/box/advanced?gameId=401236010",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"game",
+								"box",
+								"advanced"
+							],
+							"query": [
+								{
+									"key": "gameId",
+									"value": "401236010"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drives",
+			"item": [
+				{
+					"name": "Drive data and results",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/drives?year=2020&week=12&team=Indiana",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"drives"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular",
+									"disabled": true
+								},
+								{
+									"key": "week",
+									"value": "12"
+								},
+								{
+									"key": "team",
+									"value": "Indiana"
+								},
+								{
+									"key": "offense",
+									"value": "Florida",
+									"disabled": true
+								},
+								{
+									"key": "defense",
+									"value": "Miami",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "ACC",
+									"disabled": true
+								},
+								{
+									"key": "offenseConference",
+									"value": "AAC",
+									"disabled": true
+								},
+								{
+									"key": "defenseConference",
+									"value": "C-USA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plays",
+			"item": [
+				{
+					"name": "List Play Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/play/types",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"play",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Play by Play data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/plays?year=2020&week=11&team=Ohio",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"plays"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "week",
+									"value": "11",
+									"description": "Required"
+								},
+								{
+									"key": "team",
+									"value": "Ohio"
+								},
+								{
+									"key": "offense",
+									"value": "Kent St.",
+									"disabled": true
+								},
+								{
+									"key": "defense",
+									"value": "Toledo",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "MAC",
+									"disabled": true
+								},
+								{
+									"key": "offenseConference",
+									"value": "MVC",
+									"disabled": true
+								},
+								{
+									"key": "defenseConference",
+									"value": "SWAC",
+									"disabled": true
+								},
+								{
+									"key": "playType",
+									"value": "Kickoff",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Play stats by play",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/play/stats?year=2020&week=12",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"play",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "week",
+									"value": "12"
+								},
+								{
+									"key": "team",
+									"value": "UNT",
+									"disabled": true
+								},
+								{
+									"key": "gameId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "athleteId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "statTypeId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "seasonType",
+									"value": "regular",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "Southland",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List types of player play stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/play/stat/types",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"play",
+								"stat",
+								"types"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conferences",
+			"item": [
+				{
+					"name": "List Conferences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Venues",
+			"item": [
+				{
+					"name": "Arena and venue information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/venues",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"venues"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coaches",
+			"item": [
+				{
+					"name": "Coaching records and history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/coaches?firstName=Bobby&lastName=Bowden",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"coaches"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Bobby"
+								},
+								{
+									"key": "lastName",
+									"value": "Bowden"
+								},
+								{
+									"key": "team",
+									"value": "FSU",
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "1999",
+									"disabled": true
+								},
+								{
+									"key": "minYear",
+									"value": "1995",
+									"disabled": true
+								},
+								{
+									"key": "maxYear",
+									"value": "2002",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Search for player information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/player/search?searchTerm=Newton&position=QB",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"player",
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "Newton",
+									"description": "Required"
+								},
+								{
+									"key": "position",
+									"value": "QB"
+								},
+								{
+									"key": "team",
+									"value": "Auburn",
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "2012",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player Usage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/player/usage?year=2020&team=Vanderbilt&position=WR&excludeGarbageTime=false",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"player",
+								"usage"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "team",
+									"value": "Vanderbilt"
+								},
+								{
+									"key": "conference",
+									"value": "SEC",
+									"disabled": true
+								},
+								{
+									"key": "position",
+									"value": "WR"
+								},
+								{
+									"key": "playerId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "excludeGarbageTime",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team returning production metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/player/returning?year=2020&team=Missouri",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"player",
+								"returning"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Missouri"
+								},
+								{
+									"key": "conference",
+									"value": "SEC",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player stats by season",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/stats/player/season?year=2020&team=Marshall&category=passing",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"stats",
+								"player",
+								"season"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "team",
+									"value": "Marshall"
+								},
+								{
+									"key": "conference",
+									"value": "CUSA",
+									"disabled": true
+								},
+								{
+									"key": "startWeek",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "endWeek",
+									"value": "14",
+									"disabled": true
+								},
+								{
+									"key": "seasonType",
+									"value": "both",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "passing"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Polls",
+			"item": [
+				{
+					"name": "Historical polls and rankings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/rankings?year=1975&week=5",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"rankings"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "1975",
+									"description": "Required"
+								},
+								{
+									"key": "week",
+									"value": "5"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Betting",
+			"item": [
+				{
+					"name": "Betting Lines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/lines?year=2019&conference=SBC",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"lines"
+							],
+							"query": [
+								{
+									"key": "gameId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "2019"
+								},
+								{
+									"key": "week",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "seasonType",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "team",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "home",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "away",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "SBC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recruiting",
+			"item": [
+				{
+					"name": "Player recruiting rankings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/recruiting/players?team=Miami",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"recruiting",
+								"players"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Recruiting class year, required if no team specified",
+									"disabled": true
+								},
+								{
+									"key": "classification",
+									"value": "HighSchool",
+									"description": "HighSchool, JUCO, PrepSchool",
+									"disabled": true
+								},
+								{
+									"key": "position",
+									"value": "qb",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "TX",
+									"disabled": true
+								},
+								{
+									"key": "team",
+									"value": "Miami"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team recruiting rankings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/recruiting/teams?year=2020&team=Oregon State",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"recruiting",
+								"teams"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Oregon State"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Position group recruiting rankings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/recruiting/groups?startYear=2015&endYear=2021&team=Iowa",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"recruiting",
+								"groups"
+							],
+							"query": [
+								{
+									"key": "startYear",
+									"value": "2015"
+								},
+								{
+									"key": "endYear",
+									"value": "2021"
+								},
+								{
+									"key": "team",
+									"value": "Iowa"
+								},
+								{
+									"key": "conference",
+									"value": "Big Ten",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Advanced Metrics",
+			"item": [
+				{
+					"name": "Predicted Points",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "PPA by Team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ppa/teams?year=2020&team=Illinois&excludeGarbageTime=true",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ppa",
+								"teams"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Illinois"
+								},
+								{
+									"key": "conference",
+									"value": "CUSA",
+									"disabled": true
+								},
+								{
+									"key": "excludeGarbageTime",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team PPA by Game",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ppa/games?year=2020&week=12&team=Arkansas&excludeGarbageTime=false",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ppa",
+								"games"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020",
+									"description": "Required"
+								},
+								{
+									"key": "week",
+									"value": "12"
+								},
+								{
+									"key": "team",
+									"value": "Arkansas"
+								},
+								{
+									"key": "conference",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "excludeGarbageTime",
+									"value": "false"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player PPA by Game",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ppa/players/games?year=2020&week=8&team=Arkansas State&excludeGarbageTime=false",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ppa",
+								"players",
+								"games"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "week",
+									"value": "8"
+								},
+								{
+									"key": "team",
+									"value": "Arkansas State"
+								},
+								{
+									"key": "position",
+									"value": "QB",
+									"disabled": true
+								},
+								{
+									"key": "playerId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "threshold",
+									"value": null,
+									"description": "Minimum play threshold",
+									"disabled": true
+								},
+								{
+									"key": "excludeGarbageTime",
+									"value": "false"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player PPA by Season",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ppa/players/season?year=2020&team=Michigan&position=RB",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ppa",
+								"players",
+								"season"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Michigan"
+								},
+								{
+									"key": "conference",
+									"value": "Big Ten",
+									"disabled": true
+								},
+								{
+									"key": "position",
+									"value": "RB"
+								},
+								{
+									"key": "playerId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "threshold",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "excludeGarbageTime",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Win Probability Chart Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/metrics/wp?gameId",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"metrics",
+								"wp"
+							],
+							"query": [
+								{
+									"key": "gameId",
+									"value": null,
+									"description": "Required"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pregame Win Probability Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/metrics/wp/pregame?year=2020&week=10&team=Arizona State&seasonType=regular",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"metrics",
+								"wp",
+								"pregame"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "week",
+									"value": "10"
+								},
+								{
+									"key": "team",
+									"value": "Arizona State"
+								},
+								{
+									"key": "seasonType",
+									"value": "regular"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stats",
+			"item": [
+				{
+					"name": "Team statistics by season Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/stats/season?year=2020&team=Oregon",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"stats",
+								"season"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Oregon"
+								},
+								{
+									"key": "conference",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "startWeek",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "endWeek",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advanced team statistics by season",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/stats/season/advanced?year=2020&team=Oregon&excludeGarbageTime=true",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"stats",
+								"season",
+								"advanced"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Oregon"
+								},
+								{
+									"key": "excludeGarbageTime",
+									"value": "true"
+								},
+								{
+									"key": "startWeek",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "endWeek",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advanced team game stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/stats/game/advanced?year=2020&team=Oregon&excludeGarbageTime=true",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"stats",
+								"game",
+								"advanced"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "Oregon"
+								},
+								{
+									"key": "excludeGarbageTime",
+									"value": "true"
+								},
+								{
+									"key": "week",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "opponent",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "seasonType",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team stat categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/stats/categories",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"stats",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NFL Draft",
+			"item": [
+				{
+					"name": "List of NFL Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/draft/teams",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"draft",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of NFL positions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/draft/positions",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"draft",
+								"positions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of NFL Draft picks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/draft/picks?year=2019&position=RB",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"draft",
+								"picks"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2019"
+								},
+								{
+									"key": "nflTeam",
+									"value": "Dallas Cowboys",
+									"disabled": true
+								},
+								{
+									"key": "college",
+									"value": "LSU",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "SEC",
+									"disabled": true
+								},
+								{
+									"key": "position",
+									"value": "RB"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{Token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
