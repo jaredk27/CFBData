@@ -1167,7 +1167,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{Base_URL}}/recruiting/teams?year=2020&team=Oregon State",
+							"raw": "{{Base_URL}}/recruiting/teams?year=2020&conference=SEC",
 							"host": [
 								"{{Base_URL}}"
 							],
@@ -1182,7 +1182,12 @@
 								},
 								{
 									"key": "team",
-									"value": "Oregon State"
+									"value": "Oregon State",
+									"disabled": true
+								},
+								{
+									"key": "conference",
+									"value": "SEC"
 								}
 							]
 						}
@@ -1753,6 +1758,101 @@
 								{
 									"key": "position",
 									"value": "RB"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ratings",
+			"item": [
+				{
+					"name": "SP+ Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ratings/sp?year=2020&team=UT San Antonio",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ratings",
+								"sp"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "UT San Antonio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SRS Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ratings/srs?year=2020&team=UT San Antonio",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ratings",
+								"srs"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "team",
+									"value": "UT San Antonio"
+								},
+								{
+									"key": "conference",
+									"value": "Conference USA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SP+ Ratings by Conference",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ratings/sp/conferences?year=2020&conference=CUSA",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ratings",
+								"sp",
+								"conferences"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								},
+								{
+									"key": "conference",
+									"value": "CUSA"
 								}
 							]
 						}
