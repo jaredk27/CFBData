@@ -1858,6 +1858,47 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Elo Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/ratings/elo?year=2021&week=7&team=UT San Antonio",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"ratings",
+								"elo"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2021",
+									"description": "Season as an integer"
+								},
+								{
+									"key": "week",
+									"value": "7",
+									"description": "Week of the season as an integer"
+								},
+								{
+									"key": "team",
+									"value": "UT San Antonio",
+									"description": "Team as a string"
+								},
+								{
+									"key": "conference",
+									"value": "Conference USA",
+									"description": "Conference as a string",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
